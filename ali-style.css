@@ -1,0 +1,1002 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+h1.in {
+    color: rgb(77, 179, 243);
+    position: absolute;
+    top: 470px;
+    right: 20px;
+}
+
+h2.out {
+    font-size: 20px;
+    position: absolute;
+    top: 500px;
+    right: 40px;
+
+}
+/* Responsive styles */
+@media (max-width: 1200px) {
+    h1.in {
+        top: 400px;
+    }
+
+    h2.out {
+        top: 430px;
+    }
+}
+@media (max-width: 768px) {
+    h1.in {
+        top: 300px;
+        font-size: 24px;
+    }
+
+    h2.out {
+        top: 330px;
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px) {
+    h1.in {
+        top: 200px;
+        font-size: 20px;
+    }
+
+    h2.out {
+        top: 230px;
+        font-size: 16px;
+    }
+}
+/*كل دا يخص المربع بتاع علوم البيانات*/
+body::before {
+    content: '';
+    position: fixed; /* Fixed position to stay on the page as it scrolls */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0, 0, 255, 0.1) 1px, transparent 1px), 
+                      radial-gradient(circle, rgba(0, 0, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 10px 10px, 0 0;
+    z-index: -1;
+}
+
+/* Static shapes for the background */
+.shape1, .shape2, .shape3, .shape4, .shape5, .shape6, .shape7, .shape8, .shape9, .shape10,
+.shape11, .shape12, .shape13, .shape14, .shape15, .shape16, .shape17, .shape18, .shape19, .shape20 {
+    position: fixed; /* Fixed position to stay on the page as it scrolls */
+    z-index: -1;
+    opacity: 0.6; /* Adjusted opacity for better blending */
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Adjust the value for desired float effect */
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Shape styling */
+.shape1 {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 255, 0.3);
+    top: 5%;
+    left: 5%;
+    border-radius: 50%; /* Circle */
+    animation: float 8s ease-in-out infinite; /* Floating animation */
+}
+
+.shape2 {
+    width: 180px;
+    height: 180px;
+    background-color: rgba(0, 0, 180, 0.3);
+    top: 30%;
+    left: 25%;
+    border-radius: 50%; /* Circle */
+    animation: float 8s ease-in-out infinite; /* Floating animation */
+
+}
+
+.shape3 {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(0, 0, 205, 0.3);
+    top: 55%;
+    left: 50%;
+    border-radius: 50%; /* Circle */
+    animation: float 8s ease-in-out infinite; /* Floating animation */
+}
+
+.shape4 {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(70, 130, 180, 0.3); /* Steel Blue */
+    top: 10%;
+    left: 70%;
+    transform: rotate(45deg); /* Diamond */
+    animation: spin 6s linear infinite; /* Spinning animation */
+}
+
+.shape5 {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 191, 255, 0.3); /* Deep Sky Blue */
+    top: 40%;
+    left: 5%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Triangle */
+    animation: spin 6s linear infinite; /* Spinning animation */
+}
+
+.shape6 {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(30, 144, 255, 0.3); /* Dodger Blue */
+    top: 10%;
+    left: 30%;
+    border-radius: 0; /* Square */
+    animation: spin 6s linear infinite; /* Spinning animation */
+}
+
+.shape7 {
+    width: 200px;
+    height: 100px;
+    background-color: rgba(135, 206, 250, 0.3); /* Light Sky Blue */
+    top: 35%;
+    left: 60%;
+    border-radius: 50px; /* Oval */
+    animation: float 8s ease-in-out infinite; /* Floating animation */
+}
+
+.shape8 {
+    width: 160px;
+    height: 110px;
+    background-color: rgba(100, 149, 237, 0.3); /* Cornflower Blue */
+    top: 8%;
+    left: 85%;
+    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%); /* Star-like shape */
+    animation: spin 6s linear infinite; /* Spinning animation */
+
+}
+
+.shape9 {
+    width: 180px;
+    height: 100px;
+    background-color: rgba(70, 130, 180, 0.3); /* Steel Blue */
+    top: 30%;
+    left: 40%;
+    clip-path: ellipse(50% 50% at 50% 50%); /* Ellipse */
+    animation: float 8s ease-in-out infinite; /* Floating animation */
+
+}
+
+.shape10 {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 255, 0.3);
+    top: 54%;
+    left: 18%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%); /* Parallelogram */
+    animation: float 8s ease-in-out infinite; /* Floating animation */
+
+}
+
+/* Additional Shapes */
+.shape11 {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(0, 0, 139, 0.3); /* Dark Blue */
+    top: 30%;
+    left: 79%;
+    border-radius: 50%; /* Circle */
+    animation: float 8s ease-in-out infinite; /* Floating animation */
+}
+
+.shape12 {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 191, 255, 0.3); /* Deep Sky Blue */
+    top: 75%;
+    left: 5%;
+    transform: rotate(45deg); /* Diamond */
+    animation: spin 6s linear infinite; /* Spinning animation */
+
+}
+
+.shape13 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(70, 130, 180, 0.3); /* Steel Blue */
+    top: 85%;
+    left: 70%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Triangle */
+    animation: spin 6s linear infinite; /* Spinning animation */
+}
+
+.shape14 {
+    width: 180px;
+    height: 180px;
+    background-color: rgba(135, 206, 250, 0.3); /* Light Sky Blue */
+    top: 10%;
+    left: 50%;
+    clip-path: ellipse(60% 40% at 50% 50%); /* Ellipse */
+    animation: float 8s ease-in-out infinite; /* Floating animation */
+
+}
+
+.shape15 {
+    width: 200px;
+    height: 150px;
+    background-color: rgba(100, 149, 237, 0.3); /* Cornflower Blue */
+    top: 55%;
+    left: 32%;
+    border-radius: 50px; /* Oval */
+    animation: float 8s ease-in-out infinite; /* Floating animation */
+
+}
+
+.shape16 {
+    width: 140px;
+    height: 140px;
+    background-color: rgba(0, 0, 205, 0.3); /* Medium Blue */
+    top: 70%;
+    left: 75%;
+    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%); /* Star-like shape */
+    animation: spin 6s linear infinite; /* Spinning animation */
+
+}
+
+.shape17 {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(30, 144, 255, 0.3); /* Dodger Blue */
+    top: 76%;
+    left: 27%;
+    border-radius: 0; /* Square */
+    animation: spin 6s linear infinite; /* Spinning animation */
+
+}
+
+.shape18 {
+    width: 160px;
+    height: 160px;
+    background-color: rgba(0, 191, 255, 0.3); /* Deep Sky Blue */
+    top: 80%;
+    left: 85%;
+    transform: rotate(45deg); /* Diamond */
+    animation: spin 6s linear infinite; /* Spinning animation */
+
+}
+
+.shape19 {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(135, 206, 250, 0.3); /* Light Sky Blue */
+    top: 78%;
+    left: 18%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Triangle */
+    animation: spin 6s linear infinite; /* Spinning animation */
+
+}
+.shape20 {
+    width: 200px;
+    height: 100px;
+    background-color: rgba(100, 149, 237, 0.3); /* Cornflower Blue */
+    top: 85%;
+    left: 40%;
+    border-radius: 50px; /* Oval */
+    animation: float 8s ease-in-out infinite; /* Floating animation */
+}
+
+
+#hover-trigger-ds {
+    cursor: pointer;
+    position: absolute;
+    top:19%;
+    right: 65%;
+    width: 450px;
+    height: 400px;
+    background-color: transparent;
+    border-radius: 20px; 
+}
+#lottie-animation-ds {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top:10%;
+    right: 63%;
+    width: 500px;
+    height: 500px;
+}
+.word-ds{
+    font-size: 50px;
+    position: absolute;
+    bottom: 12% ;
+    left: 30%; 
+    color: rgb(50, 75, 75);
+}
+/*كل دا يخص المربع بتاع الملتي ميديا */
+#hover-trigger-mm {
+    background-color: transparent;
+    cursor: pointer;
+    margin: 20px;
+    position: absolute;
+    top: 750px;
+    left: 20px;
+    width: 400px;
+    height: 400px;
+}
+#lottie-animation-mm {
+    margin: 50px;
+    display:block;
+    margin: 0 auto;
+    position: absolute; 
+    margin: 20px;
+    position: absolute;
+    top: 700px;
+    left: 9px;
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+}
+.word-mm{
+    position: absolute;
+    font-size:50px;
+    top: 80% ;
+    left:20%; 
+    color: rgb(50, 75, 75);
+}
+/*كل دا يخص المربع بتاع الروبوتيكس */
+#hover-trigger-ro {
+    cursor: pointer;
+    position: absolute;
+    top: 1330px;
+    left:2%;
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    text-align: center;
+}
+#lottie-animation-ro {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 1330px;
+    left:2%;
+    width: 350px;
+    height: 350px;
+}
+.word-ro{
+    position: absolute;
+    top: 80% ;
+    right: 30%; 
+    color: rgb(50, 75, 75);
+    font-size: 50px;
+
+}
+/*hnu كل دا يخص المربع بتاع  */
+.hnu-image {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 200px; 
+    height: auto; 
+    border: 1px solid #4CAF50; 
+    border-radius: 10px; 
+    background: rgb(255, 255, 255);
+}
+/*كل دا يخص المربع بتاع الصفحات لما تتفتح من المربع */
+
+.clickable-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#clickable-box-1 {
+    background-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 400px;
+    height: 400px;
+}
+#clickable-box-2 {
+    background-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 400px;
+    height: 400px;
+}
+#clickable-box-3 {
+    background-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 400px;
+    height: 400px;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+    opacity: 1; /* Ensure opacity is set */
+    animation-duration: 1s;
+    transition: background-color 0.3s ease,box-shadow 0.3s ease; /* Smooth transition */
+}
+.close-button {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-button:hover,
+.close-button:focus {
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*دا يخص صفحه علوم البيانات و شكلها*/
+.animate-slide-in {
+    animation-name: slideIn;
+}
+.modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal-image {
+    width: 150px; 
+    height: auto;
+    margin-bottom: 15px;
+}
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.modal-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    text-align: justify;
+    direction: rtl; 
+}
+@keyframes slideIn {
+    from {transform: translateY(-200px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+.animate-slide-in {
+    animation-name: slideIn;
+}
+.modal-image {
+    display: block;
+    margin: 0 auto;
+    width: 500px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+.modal-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.modal-subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #666; 
+    margin-bottom: 20px;
+}
+.modal-text {
+    text-align: right; 
+    direction: rtl; 
+    line-height: 1.6; 
+}
+.modal-section-title {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    direction: rtl; 
+}
+.square-one{
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    width: 100px;
+    height:100px ;
+}
+
+.square-there{
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    width: 100px;
+    height:100px ;
+}
+
+/*new*/
+.headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+.untitled-page.root {
+    position: relative;
+    width: 1300px;
+    height: 1521px;
+    background-color: transparent;
+    overflow: hidden;
+  }
+  .untitled-page .rect {
+    position: absolute;
+    inset: 66% 0 0;
+    width: 1300px;
+    height: 546px;
+    background-color: #2548a1;
+  }
+  .untitled-page .subtitle {
+    position: absolute;
+    inset: 78% 1136px 140px 35px;
+    display: flex;
+    justify-content: center;
+    width: 260px;
+    height: 210px;
+    font: 600 20px/1.5 Poppins, Helvetica, Arial, serif;
+    color: white;
+    text-align: center;
+  }
+  .untitled-page .subtitle1 {
+    position: absolute;
+    inset: 75% 1162px 358px 60px;
+    display: flex;
+    justify-content: center;
+    width: 209px;
+    height: 30px;
+    font: 600 20px/1.5 Poppins, Helvetica, Arial, serif;
+    color: white;
+    text-align: center;
+  }
+  .untitled-page .subtitle2 {
+    position: absolute;
+    inset: 1171px 14px 0px 1020px;
+    display: flex;
+    justify-content: center;
+    width: 260px;
+    height: 210px;
+    font: 600 20px/1.5 Poppins, Helvetica, Arial, serif;
+    color: white;
+    text-align: center;
+  }
+  .untitled-page .subtitle3 {
+    position: absolute;
+    inset: 1133px 40px 0px 1040px;
+    display: flex;
+    justify-content: center;
+    width: 209px;
+    height: 30px;
+    font: 600 20px/1.5 Poppins, Helvetica, Arial, serif;
+    color: white;
+    text-align: center;
+  }
+  .untitled-page .cover {
+    position: absolute;
+    inset: 1437px 0 0;
+    width: 1431px;
+    height: 84px;
+  }
+  .untitled-page .subtitle11 {
+    position: absolute;
+    inset: 1487px 37.5px 0px 1200px;
+    display: flex;
+    justify-content: center;
+    width: 45px;
+    height: 30px;
+    font: 600 20px/1.5 Poppins, Helvetica, Arial, serif;
+    color: #2548a1;
+    text-align: center;
+  }
+  .untitled-page .subtitle12 {
+    position: absolute;
+    inset: 1487px 93px 0px 1180px;
+    display: flex;
+    justify-content: center;
+    width: 7px;
+    height: 30px;
+    font: 600 20px/1.5 Poppins, Helvetica, Arial, serif;
+    color: #2548a1;
+    text-align: center;
+  }
+  .untitled-page .image {
+    position: absolute;
+    inset: 1040px 547px 0px 470px;
+    width: 340px;
+    height: 117px;
+  }
+  .untitled-page .subtitle21_box {
+    position: absolute;
+    inset: 1487px 1059px 4px 38px;
+    display: flex;
+    justify-content: center;
+    width: 334px;
+    height: 30px;
+  }
+  .untitled-page .subtitle21 {
+    font: 600 20px/1.5 Poppins, Helvetica, Arial, serif;
+    color: black;
+    text-align: center;
+  }
+  .untitled-page .subtitle21_span0 {
+    font: 600 1em/1.5 Poppins, Helvetica, Arial, serif;
+    color: #2447a1;
+  }
+  .untitled-page .subtitle21_span1 {
+    font: 600 1em/1.5 Poppins, Helvetica, Arial, serif;
+  }
+  .untitled-page .subtitle13 {
+    position: absolute;
+    inset: 1487px 104px 0px 1100px;
+    display: flex;
+    justify-content: center;
+    width: 73px;
+    height: 30px;
+    font: 600 20px/1.5 Poppins, Helvetica, Arial, serif;
+    color: #2548a1;
+    text-align: center;
+  }
+  .untitled-page .subtitle4 {
+    position: absolute;
+    inset: 1180px 379px 0px 350px;
+    width: 655px;
+    height: 60px;
+    font: 600 20px/1.5 Poppins, Helvetica, Arial, serif;
+    color: white;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0")
+      format("embedded-opentype"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0")
+      format("woff2"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0")
+      format("woff"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0")
+      format("truetype"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular")
+      format("svg");
+}
+.page-content {
+    height: 100px;
+    width: 90px;
+    position: absolute;
+    top: 220%;
+    left: -0%;
+    min-height: 100vh;
+    min-width: 40vh; /* Ensures the page content fills the full viewport height */
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: flex-end; /* Aligns items to the bottom */
+}
+/*the circles*/
+.circle-container {
+    display: flex;
+    gap: 20px; /* Space between the circles */
+}
+
+.outer-circle {
+    width: 40px;
+    height: 40px;
+    background-color: transparent; /* Transparent color between circles */
+    border: 5px solid rgba(0, 0, 0, 0.1); /* Transparent border effect */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-circle {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(0, 128, 255); /* Blue color inside the inner circle */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    font-size: 25px;
+    color: rgb(255, 255, 255); /* White text for contrast */
+}
+
+
+.shapes-wrapper2 {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    position: absolute;
+    top: 230%;
+    right: 250%;
+}
+
+.shapes-wrapper3 {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    position: absolute;
+    bottom: 370px;
+    right: 250%;
+}
+.shapes-wrapper4 {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    position: absolute;
+    bottom: 1000px;
+    right: 250%;
+}
+
+.shape {
+    width: 70px;
+    height: 70px;
+    opacity: 1;
+    animation: disappear-reappear 5s linear infinite;
+}
+
+.circle {
+    background-color: #ff6f61;
+    border-radius: 50%; /* Circle */
+    animation-delay: 0s;
+}
+
+.equilateral-triangle {
+    background-color: #6fbf73;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Equilateral Triangle */
+    animation-delay: 1s;
+}
+
+.square {
+    background-color: #61dafb;
+    animation-delay: 2s;
+    /* Square (default shape) */
+}
+
+.star {
+    background-color: #f39c12;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Star */
+    animation-delay: 3s;
+}
+
+.hexagon {
+    background-color: #9b59b6;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* Hexagon */
+    animation-delay: 4s;
+}
+
+@keyframes disappear-reappear {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.grades-box {
+    width: 100%;
+    margin: 20px 0;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    direction: rtl;
+}
+
+.grades-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.grades-box th, 
+.grades-box td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.grades-box th {
+    background-color: #f0f0f0;
+}
+.student-level-box {
+    width: 100%;
+    margin: 20px 0;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    direction: rtl;
+}
+
+.student-level-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.student-level-box th, 
+.student-level-box td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.student-level-box th {
+    background-color: #f0f0f0;
+}
+
+.student-level-box .note {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.cumulative-gpa-box {
+    width: 50%;
+    margin: 20px 0;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    direction: rtl;
+}
+
+.cumulative-gpa-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cumulative-gpa-box th, 
+.cumulative-gpa-box td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.cumulative-gpa-box th {
+    background-color: #f0f0f0;
+}
+
+.graduation-requirements-box {
+    width: 100%;
+    margin: 20px 0;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    direction: rtl;
+}
+
+.graduation-requirements-box table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.graduation-requirements-box th,
+.graduation-requirements-box td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.graduation-requirements-box th {
+    background-color: #f0f0f0;
+}
+
+
+.table-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.classification-table {
+    width: 100%;
+    border-collapse: collapse;
+    direction: rtl;
+    text-align: center;
+}
+
+.classification-table th, 
+.classification-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+.classification-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.classification-table td {
+    font-size: 16px;
+}
+
+.classification-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.grade-table {
+    border-collapse: collapse;
+    width: 30%;
+}
+
+.table-header {
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.table-cell {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
